@@ -1,3 +1,26 @@
+# dbank Overview
+A DeFi app written in Motoko and built on Internet Computer Canisters smart contracts. 
+
+# How it works? 
+Users  may deposit any amount more than 0 , once user has deposit the amount, seconds later, when page is refreshed, user will find that their current Balance 
+increases due to the compounding interest. Users can also withdraw the amount at any time, any remaining current Balance will continue to compound accordingly.
+As for the purpose of this test dApp and in order to see how interest compound functions, the interest compound is in elapsed in terms of seconds. 
+
+
+  public func compound() {
+    let currentTime = Time.now();
+    let timeElapsedNs = currentTime - startTime;
+    let timeElapsedS = timeElapsedNs / 1000000000;
+    currentValue := currentValue * (1.01 ** Float.fromInt(timeElapsedS));
+    startTime := currentTime;
+  };
+
+
+
+Link to Dbank, DeFi App deployed on Internet Computer blockchain: 
+https://nrogx-4yaaa-aaaai-qi2oa-cai.ic0.app/
+
+
 # dbank
 
 Welcome to your new dbank project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
