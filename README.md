@@ -6,17 +6,6 @@ Users  may deposit any amount more than 0 , once user has deposit the amount, se
 increases due to the compounding interest. Users can also withdraw the amount at any time, any remaining current Balance will continue to compound accordingly.
 As for the purpose of this test dApp and in order to see how interest compound functions, the interest compound is in elapsed in terms of seconds. 
 
-
-  public func compound() {
-    let currentTime = Time.now();
-    let timeElapsedNs = currentTime - startTime;
-    let timeElapsedS = timeElapsedNs / 1000000000;
-    currentValue := currentValue * (1.01 ** Float.fromInt(timeElapsedS));
-    startTime := currentTime;
-  };
-
-
-
 Link to Dbank, DeFi App deployed on Internet Computer blockchain: 
 https://nrogx-4yaaa-aaaai-qi2oa-cai.ic0.app/
 
